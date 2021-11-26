@@ -1,0 +1,10 @@
+@import "~@contacto-io/style-guide/build/style-guide.css";
+
+:root {
+    --sms-color: var(--success-color);
+    --voice-color: var(--secondary-color);
+}
+
+.main {
+    height: 100vh;
+}

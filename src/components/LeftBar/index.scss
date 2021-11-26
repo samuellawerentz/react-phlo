@@ -1,0 +1,15 @@
+.left-bar {
+    width: 240px;
+    padding: 16px 24px 0;
+    box-shadow: 3px 0px 6px rgba(0, 0, 0, 0.06);
+    backdrop-filter: blur(27.1828px);
+    max-height: 100%;
+    overflow: scroll;
+    &-item {
+        border: 1px solid var(--border-color);
+        padding: 8px 4px;
+    }
+    &-section {
+        margin-top: 16px;
+    }
+}

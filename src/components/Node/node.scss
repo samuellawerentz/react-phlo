@@ -1,0 +1,89 @@
+.custom-node {
+    --node-color: var(--gray-1);
+    min-width: 200px;
+    min-height: 100px;
+    background-color: var(--white);
+    border: 1px solid var(--node-color);
+    display: flex;
+    flex-direction: column;
+    border-top-width: 4px;
+    border-radius: 4px 4px 0 0;
+
+    &.sms {
+        --node-color: var(--sms-color);
+    }
+
+    &.voice {
+        --node-color: var(--voice-color);
+    }
+
+    &.start {
+        --node-color: var(--success-color);
+    }
+
+    .node-content {
+        padding: 16px;
+    }
+
+    .handle-container {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: var(--background-highlight-color);
+
+        .handle-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .react-flow__handle {
+                transform: none;
+            }
+        }
+
+        &-top {
+            background-color: var(--white);
+
+            .handle-text {
+                display: none;
+            }
+
+            .handle-box {
+                position: relative;
+                top: -8px;
+
+                .react-flow__handle {
+                    width: 12px;
+                    height: 12px;
+                    border: 0;
+                    background-color: var(--node-color);
+                }
+            }
+        }
+
+        &-bottom {
+            margin-top: auto;
+
+            .handle-box {
+                position: relative;
+                top: 5px;
+                padding: 0 16px;
+                .react-flow__handle {
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 2px;
+                    background-color: var(--white);
+                    border: 1px solid var(--secondary-text-color);
+                    
+                }
+                &.connected .react-flow__handle{
+                    background-color: var(--secondary-text-color);
+                }
+            }
+        }
+    }
+
+    .node-handle {
+        position: static;
+    }
+}
