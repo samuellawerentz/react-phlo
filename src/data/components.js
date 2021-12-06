@@ -9,6 +9,7 @@ export const components = {
         components: [
           {
             class: 'start',
+            nodeCategory: 'start',
             color: '#00695C',
             component: 'start',
             config: {
@@ -97,7 +98,7 @@ export const components = {
               errors: {},
               isSaveErrored: false,
             },
-            icon: 'https://d2wsqfbujo4jlg.cloudfront.net/component_icons/start_2CB031.svg',
+            icon: 'https://d2nvdon9sfh3to.cloudfront.net/static/components/start.svg',
             input: false,
             left: 0,
             name: 'Start',
@@ -174,6 +175,7 @@ export const components = {
           {
             class: 'component',
             color: '#3F51B5',
+            nodeCategory: 'voice',
             component: 'ivrmenu',
             config: {
               dynamic_states: true,
@@ -265,7 +267,7 @@ export const components = {
               errors: {},
               isSaveErrored: false,
             },
-            icon: 'https://d2wsqfbujo4jlg.cloudfront.net/component_icons/ivr_menu_9B51E0.svg',
+            icon: 'https://d2nvdon9sfh3to.cloudfront.net/static/components/ivr_menu.svg',
             input: true,
             name: 'IVR Menu',
             node_vars: { _component: ['digits'] },
@@ -276,6 +278,7 @@ export const components = {
           {
             class: 'component',
             color: '#3F51B5',
+            nodeCategory: 'voice',
             component: 'getinput',
             config: {
               dynamic_states: false,
@@ -364,7 +367,7 @@ export const components = {
               errors: {},
               isSaveErrored: false,
             },
-            icon: 'https://d2wsqfbujo4jlg.cloudfront.net/component_icons/get_input_9B51E0.svg',
+            icon: 'https://d2nvdon9sfh3to.cloudfront.net/static/components/get_input.svg',
             input: true,
             name: 'Get Input',
             node_vars: { _component: ['input', 'input_type'] },
@@ -375,6 +378,7 @@ export const components = {
           {
             class: 'component',
             color: '#3F51B5',
+            nodeCategory: 'voice',
             component: 'initiatecall',
             config: {
               dynamic_states: true,
@@ -485,7 +489,7 @@ export const components = {
               errors: {},
               isSaveErrored: false,
             },
-            icon: 'https://d2wsqfbujo4jlg.cloudfront.net/component_icons/initiate_call_9B51E0.svg',
+            icon: 'https://d2nvdon9sfh3to.cloudfront.net/static/components/initiate_call.svg',
             input: true,
             name: 'Initiate Call',
             node_vars: {
@@ -509,6 +513,7 @@ export const components = {
           {
             class: 'component',
             color: '#3F51B5',
+            nodeCategory: 'voice',
             component: 'hangup',
             config: {
               dynamic_states: false,
@@ -540,7 +545,7 @@ export const components = {
               errors: {},
               isSaveErrored: false,
             },
-            icon: 'https://d2wsqfbujo4jlg.cloudfront.net/component_icons/hangup_9B51E0.svg',
+            icon: 'https://d2nvdon9sfh3to.cloudfront.net/static/components/hangup.svg',
             input: true,
             name: 'Hangup',
             node_vars: { _component: [] },
@@ -551,6 +556,7 @@ export const components = {
           {
             class: 'component',
             color: '#3F51B5',
+            nodeCategory: 'voice',
             component: 'prompt',
             config: {
               dynamic_states: false,
@@ -598,7 +604,7 @@ export const components = {
               errors: {},
               isSaveErrored: false,
             },
-            icon: 'https://d2wsqfbujo4jlg.cloudfront.net/component_icons/prompt_9B51E0.svg',
+            icon: 'https://d2nvdon9sfh3to.cloudfront.net/static/components/prompt.svg',
             input: true,
             name: 'Play Audio',
             node_vars: { _component: [] },
@@ -609,6 +615,7 @@ export const components = {
           {
             class: 'component',
             color: '#3F51B5',
+            nodeCategory: 'voice',
             component: 'voicemail',
             config: {
               dynamic_states: false,
@@ -716,7 +723,7 @@ export const components = {
               errors: {},
               isSaveErrored: false,
             },
-            icon: 'https://d2wsqfbujo4jlg.cloudfront.net/component_icons/voicemail_9B51E0.svg',
+            icon: 'https://d2nvdon9sfh3to.cloudfront.net/static/components/voicemail.svg',
             input: true,
             name: 'Record Audio',
             node_vars: {
@@ -737,6 +744,7 @@ export const components = {
           {
             class: 'component',
             color: '#3F51B5',
+            nodeCategory: 'voice',
             component: 'queueandroute',
             config: {
               dynamic_states: true,
@@ -840,7 +848,7 @@ export const components = {
               errors: {},
               isSaveErrored: false,
             },
-            icon: 'https://d2wsqfbujo4jlg.cloudfront.net/component_icons/queue_and_route_9B51E0.svg',
+            icon: 'https://d2nvdon9sfh3to.cloudfront.net/static/components/queue_and_route.svg',
             input: true,
             name: 'Queue and Route',
             node_vars: { _component: ['next_state'] },
@@ -851,6 +859,7 @@ export const components = {
           {
             class: 'component',
             color: '#3F51B5',
+            nodeCategory: 'voice',
             component: 'queue',
             config: {
               dynamic_states: false,
@@ -978,7 +987,7 @@ export const components = {
               errors: {},
               isSaveErrored: false,
             },
-            icon: 'https://d2wsqfbujo4jlg.cloudfront.net/component_icons/queue_9B51E0.svg',
+            icon: 'https://d2nvdon9sfh3to.cloudfront.net/static/components/queue.svg',
             input: true,
             name: 'Queue',
             node_vars: { _component: [] },
@@ -995,6 +1004,7 @@ export const components = {
           {
             class: 'component',
             color: '#00BCD4',
+            nodeCategory: 'sms',
             component: 'sendmessage',
             config: {
               dynamic_states: true,
@@ -1086,7 +1096,7 @@ export const components = {
               errors: {},
               isSaveErrored: false,
             },
-            icon: 'https://d2wsqfbujo4jlg.cloudfront.net/component_icons/send_message_193FC2.svg',
+            icon: 'https://d2nvdon9sfh3to.cloudfront.net/static/components/send_message.svg',
             input: true,
             name: 'Send Message',
             node_vars: {
@@ -1120,6 +1130,7 @@ export const components = {
           {
             class: 'component',
             color: '#56CCF2',
+            nodeCategory: 'chat',
             component: 'sendchat',
             config: {
               dynamic_states: true,
@@ -1154,7 +1165,7 @@ export const components = {
               errors: {},
               isSaveErrored: false,
             },
-            icon: 'https://d2wsqfbujo4jlg.cloudfront.net/component_icons/send_chat_56CCF2.svg',
+            icon: 'https://d2nvdon9sfh3to.cloudfront.net/static/components/send_chat.svg',
             input: true,
             name: 'Send Chat',
             node_vars: { _component: ['status'] },
@@ -1171,6 +1182,7 @@ export const components = {
           {
             class: 'component',
             color: '#795548',
+            nodeCategory: 'function',
             component: 'httprequest',
             config: {
               dynamic_states: true,
@@ -1230,7 +1242,7 @@ export const components = {
               errors: {},
               isSaveErrored: false,
             },
-            icon: 'https://d2wsqfbujo4jlg.cloudfront.net/component_icons/http_request_FFB012.svg',
+            icon: 'https://d2nvdon9sfh3to.cloudfront.net/static/components/http_request.svg',
             input: true,
             name: 'HTTP Request',
             node_vars: { _component: ['content_type', 'response', 'status_code'] },
@@ -1241,6 +1253,7 @@ export const components = {
           {
             class: 'component',
             color: '#3F51B5',
+            nodeCategory: 'function',
             component: 'counter',
             config: {
               dynamic_states: true,
@@ -1280,7 +1293,7 @@ export const components = {
               errors: {},
               isSaveErrored: false,
             },
-            icon: 'https://d2wsqfbujo4jlg.cloudfront.net/component_icons/counter_FFB012.svg',
+            icon: 'https://d2nvdon9sfh3to.cloudfront.net/static/components/counter.svg',
             input: true,
             name: 'Counter',
             node_vars: { _component: [] },
@@ -1291,6 +1304,7 @@ export const components = {
           {
             class: 'component',
             color: '#3F51B5',
+            nodeCategory: 'function',
             component: 'branch',
             config: {
               dynamic_states: true,
@@ -1340,7 +1354,7 @@ export const components = {
               errors: {},
               isSaveErrored: false,
             },
-            icon: 'https://d2wsqfbujo4jlg.cloudfront.net/component_icons/branch_FFB012.svg',
+            icon: 'https://d2nvdon9sfh3to.cloudfront.net/static/components/branch.svg',
             input: true,
             name: 'Branch',
             node_vars: { _component: [] },
@@ -1351,6 +1365,7 @@ export const components = {
           {
             class: 'component',
             color: '#3F51B5',
+            nodeCategory: 'function',
             component: 'businesshour',
             config: {
               dynamic_states: true,
@@ -1382,7 +1397,7 @@ export const components = {
               errors: {},
               isSaveErrored: false,
             },
-            icon: 'https://d2wsqfbujo4jlg.cloudfront.net/component_icons/business_hour_FFB012.svg',
+            icon: 'https://d2nvdon9sfh3to.cloudfront.net/static/components/business_hour.svg',
             input: true,
             name: 'Business Hours',
             node_vars: { _component: ['state'] },
@@ -1393,11 +1408,6 @@ export const components = {
         ],
       },
     ],
-    template: {
-      props: ['data', 'componentColor'],
-      template:
-        '<li v-bind:flow-node-type="data.class" v-bind:data-node="data.type">\n    <div class="node-container-palettes phlo-component _palette-item"\n      :style="\'border:1px solid \' + componentColor">\n        <div class="text-area">\n          <div class="component-info">\n              <span :class="data.type"> </span>\n              <span class="__comp-name">\n                  {{data.name}}\n              </span>\n          </div>\n        </div>\n    </div>\n</li>',
-    },
   },
   errors: null,
 }

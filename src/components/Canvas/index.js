@@ -1,16 +1,27 @@
+import { omit } from 'lodash'
 import React, { Component } from 'react'
-import ReactFlow, { Controls, addEdge, Background } from 'react-flow-renderer'
+import ReactFlow, { Controls, addEdge, Background, isNode } from 'react-flow-renderer'
+import { connect } from 'react-redux'
 import { phloApi } from '../../data/phlo-api.js'
+import { setRightBarVisible, setSelectedComponent } from '../../store/rootSlice.js'
 import { prepareElements } from '../../utils/utils.js'
-import { SMS, Voice, Start } from './../Node'
+import { PHLONode } from './../Node'
 import './index.scss'
 
-export default class PhloCanvas extends Component {
-  constructor() {
+class PhloCanvas extends Component {
+  constructor(props) {
     super()
     this.onConnect = this.onConnect.bind(this)
     this.state = {
-      elements: prepareElements(phloApi.data),
+      elements: prepareElements(phloApi.data).map((element) => {
+        // eslint-disable-next-line no-debugger
+        if (isNode(element))
+          element.data.onClick = () => {
+            props.setSelectedComponent(omit(element.data, 'onClick'))
+            props.setRightbarVisible(true)
+          }
+        return element
+      }),
     }
   }
 
@@ -24,7 +35,7 @@ export default class PhloCanvas extends Component {
         <ReactFlow
           elements={this.state.elements}
           // onLoad={(params) => console.log(params.getElements())}
-          nodeTypes={{ sms: SMS, voice: Voice, start: Start }}
+          nodeTypes={{ node: PHLONode }}
           onConnect={this.onConnect}
         >
           <Controls />
@@ -40,3 +51,10 @@ export default class PhloCanvas extends Component {
     )
   }
 }
+
+const mapDispatch = (dispatch) => ({
+  setRightbarVisible: (...args) => dispatch(setRightBarVisible(...args)),
+  setSelectedComponent: (...args) => dispatch(setSelectedComponent(...args)),
+})
+
+export default connect(null, mapDispatch)(PhloCanvas)

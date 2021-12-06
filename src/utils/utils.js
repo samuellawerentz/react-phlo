@@ -1,13 +1,16 @@
+import { CategoryMap } from '../data/constants'
+
 export const prepareElements = (data) => {
   const nodes = data.nodes.map(({ name, description, id, icon, ...nodeProps }) => {
     const nodeObject = {
       id,
-      type: nodeProps.type === 'start' ? 'start' : 'voice',
+      type: 'node',
       position: { x: nodeProps.left + 24, y: nodeProps.top + 24 },
       data: {
         name,
         description,
         icon,
+        nodeCategory: CategoryMap[nodeProps.component],
         handles: nodeProps.config.output_states
           .filter((opState) => opState.selected)
           .map((opState) => ({

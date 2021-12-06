@@ -19,13 +19,13 @@ const Section = ({ name, components }) => {
   )
 }
 
-const ComponentBlock = ({ name }) => (
+const ComponentBlock = ({ name, icon }) => (
   <Block display="flex" alignItems="center" className="left-bar-item">
     <Block horizontalSpacing={[0, 4]}>
       <Icon name="drag_indicator" color="gray-4" size={20} />
     </Block>
     <Block horizontalSpacing={[0, 8]}>
-      <Icon name="tag" />
+      <img src={icon} alt={name} />
     </Block>
     <Text.Block>{name}</Text.Block>
   </Block>

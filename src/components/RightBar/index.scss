@@ -1,0 +1,19 @@
+.right-bar {
+    width: 464px;
+    transform: translateX(100%);
+    position: absolute;
+    right: 0;
+    background-color: var(--white);
+    padding: 24px 16px 16px;
+    height: 100%;
+    z-index: 100;
+    box-shadow: -3px 0px 6px rgba(0, 0, 0, 0.06);
+    transition: transform ease-out 0.2s;;
+    box-sizing: border-box;
+
+    &.open {
+        transform: translateX(0);
+
+        transition: transform ease 0.3s;
+    }
+}

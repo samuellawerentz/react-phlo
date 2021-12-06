@@ -23,10 +23,10 @@ const HandleWithLabel = ({ label = 'Node', ...props }) => {
   )
 }
 
-const CustomNode = memo(function Node({ data, nodeType, id }) {
+export const PHLONode = memo(function Node({ data, id }) {
   return (
-    <div className={['custom-node', nodeType || ''].join(' ')}>
-      {nodeType !== 'start' && (
+    <div className={['custom-node', data.nodeCategory || ''].join(' ')} onClick={data.onClick}>
+      {data.nodeCategory !== 'start' && (
         <div className="handle-container handle-container-top">
           <HandleWithLabel
             id={id + '.Input'}
@@ -61,7 +61,3 @@ const CustomNode = memo(function Node({ data, nodeType, id }) {
     </div>
   )
 })
-
-export const Start = memo((props) => <CustomNode nodeType="start" {...props} />)
-export const SMS = memo((props) => <CustomNode nodeType="sms" {...props} />)
-export const Voice = memo((props) => <CustomNode nodeType="voice" {...props} />)

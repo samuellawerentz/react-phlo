@@ -1,0 +1,17 @@
+export const CategoryMap = {
+  start: 'start',
+  getinput: 'voice',
+  ivrmenu: 'voice',
+  initiatecall: 'voice',
+  hangup: 'voice',
+  prompt: 'voice',
+  voicemail: 'voice',
+  queueandroute: 'voice',
+  queue: 'voice',
+  sendmessage: 'sms',
+  sendchat: 'chat',
+  httprequest: 'function',
+  counter: 'function',
+  branch: 'function',
+  businesshour: 'function',
+}
