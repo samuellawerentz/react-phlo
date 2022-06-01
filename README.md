@@ -6,3 +6,5 @@ This is a simple example or POC of recreating PHLO UI from scratch using react-f
 [react-flow](https://reactflow.dev/)
 
 *Feel free to have a look at the source codes*
+
+The sample app is deployed here - https://samuellawerentz.github.io/react-phlo/
