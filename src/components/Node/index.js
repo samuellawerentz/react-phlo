@@ -1,7 +1,7 @@
 /* eslint-disable react/display-name */
 import React, { memo, useState } from 'react'
 import { Handle } from 'react-flow-renderer'
-import { Block, Icon, Text } from '@contacto-io/style-guide'
+import { Block, Text } from '@contacto-io/style-guide'
 import './node.scss'
 
 const HandleWithLabel = ({ label = 'Node', ...props }) => {
@@ -39,7 +39,12 @@ export const PHLONode = memo(function Node({ data, id }) {
       )}
       <div className="node-content">
         <Block display="flex" alignItems="center" spacing={[8]}>
-          <Icon name="tag" size={24} />
+          <Block horizontalSpacing={[0, 8]}>
+            <img
+              alt="tag"
+              src={`https://d2nvdon9sfh3to.cloudfront.net/static/components/${data.type}.svg`}
+            />
+          </Block>
           <Text>{data.name}</Text>
         </Block>
         <Text.Block type="caption" color="gray-1">

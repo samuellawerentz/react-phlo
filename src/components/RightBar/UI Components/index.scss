@@ -1,0 +1,10 @@
+.event-callbacks-select {
+    width: 100px;
+    & + .contacto-input-wrapper {
+        flex-grow: 1;
+    }
+}
+
+.json-editor-heading span{
+    width: 173px;
+}

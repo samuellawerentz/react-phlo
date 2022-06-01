@@ -1,6 +1,6 @@
 import { omit } from 'lodash'
 import React, { Component } from 'react'
-import ReactFlow, { Controls, addEdge, Background, isNode } from 'react-flow-renderer'
+import ReactFlow, { Controls, addEdge, Background, isNode, StepEdge } from 'react-flow-renderer'
 import { connect } from 'react-redux'
 import { phloApi } from '../../data/phlo-api.js'
 import { setRightBarVisible, setSelectedComponent } from '../../store/rootSlice.js'
@@ -26,7 +26,7 @@ class PhloCanvas extends Component {
   }
 
   onConnect(params) {
-    this.setState({ elements: addEdge(params, this.state.elements) })
+    this.setState({ elements: addEdge({ type: 'step', ...params }, this.state.elements) })
   }
 
   render() {
@@ -37,6 +37,7 @@ class PhloCanvas extends Component {
           // onLoad={(params) => console.log(params.getElements())}
           nodeTypes={{ node: PHLONode }}
           onConnect={this.onConnect}
+          edgeTypes={{ default: StepEdge }}
         >
           <Controls />
           <Background

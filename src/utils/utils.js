@@ -1,13 +1,14 @@
 import { CategoryMap } from '../data/constants'
 
 export const prepareElements = (data) => {
-  const nodes = data.nodes.map(({ name, description, id, icon, ...nodeProps }) => {
+  const nodes = data.nodes.map(({ name, description, id, icon, type, ...nodeProps }) => {
     const nodeObject = {
       id,
       type: 'node',
       position: { x: nodeProps.left + 24, y: nodeProps.top + 24 },
       data: {
         name,
+        type,
         description,
         icon,
         nodeCategory: CategoryMap[nodeProps.component],
@@ -39,4 +40,8 @@ export const prepareLeftBar = (data) => {
     name: section.category,
     components: section.components.map(({ name, icon, component }) => ({ name, icon, component })),
   }))
+}
+
+export const capitalizeFirstLetter = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1)
 }

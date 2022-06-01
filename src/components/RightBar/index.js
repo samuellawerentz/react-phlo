@@ -3,6 +3,13 @@ import { connect } from 'react-redux'
 import './index.scss'
 import { Block, Text, Icon } from '@contacto-io/style-guide'
 import { setRightBarVisible } from '../../store/rootSlice.js'
+import * as componentsMap from './Sub Components'
+import { capitalizeFirstLetter } from '../../utils/utils'
+
+const SelectedRightBarComponent = ({ type, ...props }) => {
+  const DynamicComponent = componentsMap[capitalizeFirstLetter(type)]
+  return DynamicComponent ? <DynamicComponent {...props} /> : null
+}
 
 class RightBar extends Component {
   render() {
@@ -18,6 +25,9 @@ class RightBar extends Component {
                 hoverColor="text-primary-color"
                 onClick={() => this.props.setRightbarVisible(false)}
               />
+            </Block>
+            <Block>
+              <SelectedRightBarComponent type={this.props.selectedComponent.type} text="hah1a" />
             </Block>
           </Block.Column>
         )}
