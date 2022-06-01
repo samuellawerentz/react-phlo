@@ -8,3 +8,5 @@ This is a simple example or POC of recreating PHLO UI from scratch using react-f
 *Feel free to have a look at the source codes*
 
 The sample app is deployed here - https://samuellawerentz.github.io/react-phlo/
+ 
+ [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://samuellawerentz.github.io/react-phlo/)
